@@ -1,0 +1,25 @@
+{
+  "name": "gps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "distance.js",
+  "dependencies": {
+    "cron": "^1.2.1",
+    "google-distance": "^1.0.1",
+    "google-distance-matrix": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkspramuditha/gpsTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkspramuditha/gpsTest/issues"
+  },
+  "homepage": "https://github.com/mkspramuditha/gpsTest#readme"
+}

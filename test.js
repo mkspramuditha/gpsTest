@@ -40,27 +40,28 @@ function get() {
 
         try{
             var details = JSON.parse(body)[0];
+            console.log(details.number);
+            var latitude = details.lat;
+            var longitude = details.lon;
+            var time = details.timestamp;
+
+            var data = {
+                latitude:latitude,
+                longitude:longitude,
+                timestamp:time
+            };
+
+            dataArray.push(data);
+            console.log(dataArray);
+
+            jsonfile.writeFile(file, dataArray, function (err) {
+                console.error(err)
+            })
         }catch (e){
             getToken();
         }
 
-        console.log(details.number);
-        var latitude = details.lat;
-        var longitude = details.lon;
-        var time = details.timestamp;
 
-        var data = {
-            latitude:latitude,
-            longitude:longitude,
-            timestamp:time
-        };
-
-        dataArray.push(data);
-        console.log(dataArray);
-
-        jsonfile.writeFile(file, dataArray, function (err) {
-            console.error(err)
-        })
     });
 
 }
